@@ -1,0 +1,35 @@
+.profilecard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.editprofile {
+   margin-left 20px;
+   background-color: white;
+   font-size: 14px;
+   padding: 7px 7px 7px 7px;
+   border-radius: 5px;
+   border: 1px solid gray;
+}
+
+
+.checkcontainerprofile {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+
+.editprofile:focus {
+  outline: none;
+  color: gray;
+}
+.settingsicon {
+  font-color: black;
+}

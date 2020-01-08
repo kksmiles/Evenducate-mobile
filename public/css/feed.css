@@ -1,0 +1,144 @@
+.eventdate {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #EB5438;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.event {
+    height: 100%;
+    position: relative;
+
+}
+.eventtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+    color: #39364F;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.eventimage {
+    background-color: black;
+    height: 200px;
+}
+
+.eventbody {
+    margin-top: 10px;
+}
+
+.eventplace {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #39364F;
+    font-size: 14px;
+    position: absolute;
+    bottom : 0;
+    display: block;
+}
+
+.heartcontainer {
+    position: absolute;
+    right: 8%;
+    top: 54%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+.checkcontainer {
+    position: absolute;
+    right: 22%;
+    top: 54%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.checkcontainerbrowse {
+    position: absolute;
+    right: 12%;
+    top: 5%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.heartcontainerbrowse {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow:  1px 1px 1px 1px #ccc;
+    border-radius: 6px;
+}
+
+.fa-calendar-check:hover {
+  color: #EB5438;
+
+}
+.fa-heart:hover {
+  color: #EB5438;
+}
+
+.tag {
+    background-color: #39364F;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    right: 0px;
+    bottom : 7px;
+    color : white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70px;
+
+}
+
+.searchinput {
+  text-decoration: underline;
+  font-size: 2.3rem;
+  border: none;
+  color: #1F0A3D;
+}
+.searchinput::placeholder {
+  text-decoration: underline;
+  color : #A9A8B3;
+}
+.searchinput:focus{
+    outline: none;
+}
+.sdropdown:focus{
+  outline: none;
+}
+.sdropdown {
+  padding: 8px 0px 8px 8px;
+  width: 120px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-color: #A9A8B3;
+  border-width: 3px;
+}
+.searchbutton {
+  padding: 8px;
+  width: 110px;
+  font-size: 14px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: #D1410C;
+}

@@ -1,0 +1,130 @@
+.eventcard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.eventdate {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #EB5438;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.event {
+    height: 100%;
+    position: relative;
+
+}
+.eventtitle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+    color: #39364F;
+    font-weight: bold;
+    font-size: 25px;
+}
+.eventimage {
+    background-color: black;
+    height: 400px;
+    margin-bottom : 2%;
+}
+
+.eventbody {
+    margin-top: 10px;
+}
+.eventdescription {
+  text-align : justify;
+  padding-right : 5%;
+  color : #7C7586;
+}
+
+.eventplace {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #39364F;
+    font-size: 16px;
+    position: absolute;
+    margin-top : 0%;
+    display: block;
+}
+
+.heartcontainer {
+    position: absolute;
+    right: 5%;
+    bottom: 35%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.checkcontainer {
+    position: absolute;
+    right: 18%;
+    bottom : 35%;
+    font-size: 22px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 6px;
+}
+
+.tag {
+    background-color: #39364F;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    color : white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70px;
+
+}
+.fa-calendar-check:hover {
+  color: #EB5438;
+
+}
+
+
+
+.fa-heart:hover {
+  color: #EB5438;
+}
+
+.follow {
+  padding: 1px;
+  width: 60px;
+  font-size: 12px;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #3658E3;
+  color: #3658E3;
+  background-color: transparent;
+}
+.btnRegister {
+  padding: 1px;
+  width: 90%;
+  font-size: 16px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  background-color: #3A8547;
+  outline : none;
+  bottom: 5%;
+  position: absolute;
+
+}
+.btnRegister:focus {
+  outline : none;
+}
+
+.follow:focus {
+  outline: none;
+}
+.speaker {
+  color : gray;
+}
