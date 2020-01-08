@@ -22,6 +22,7 @@ Route::get('/test', function() {
     return view('test');
 });
 
+
 Route::get('/locations', 'LocationsController@index');
 Route::get('/locations/create', 'LocationsController@create');
 Route::get('/locations/{location}', 'LocationsController@show');
@@ -91,9 +92,7 @@ Route::get('/profiles/{profile}/edit', 'ProfilesController@edit');
 Route::patch('/profiles/{profile}', 'ProfilesController@update');
 Route::delete('/profiles/{profile}', 'ProfilesController@destroy');
 
-Route::get('/notifications', function(){
-    return view('notification');
-});
+Route::get('/notifications','NotificationController@index');
 
 Route::post('/profile/fetch/followers', 'FollowsController@fetchFollowers')->name('follow.fetch.followers');
 Route::post('/event/fetch/interest', 'EventsController@fetchInterests')->name('event.fetch.interest');

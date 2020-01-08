@@ -12,15 +12,21 @@ use Illuminate\Support\Facades\DB;
 
 class ProfilesController extends Controller
 {
+    public function getUri($request)
+    {
+      $uri = $request->route()->uri;
+      return $uri;
+    }
     public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);
 
     }
-    public function index()
+    public function index(Request $request)
     {
         $profiles = Profile::all();
-        return view('profiles.index', compact('profiles'));
+        $uri = $this->getUri($request); 
+        return view('profiles.index', compact('profiles','uri'));
     }
     public function show(Profile $profile)
     {

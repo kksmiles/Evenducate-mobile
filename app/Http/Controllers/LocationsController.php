@@ -8,18 +8,29 @@ use App\User;
 
 class LocationsController extends Controller
 {
+    public function getUri($request)
+    {
+      $uri = $request->route()->uri;
+      if(strpos($uri, '/')) {
+        $uri_array = explode('/',$uri);
+        $uri = $uri_array[0];
+      }
+      return $uri;
+    }
     public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show']);
     }
-    public function index()
+    public function index(Request $request)
     {
         $locations = Location::paginate(6);
-        return view('locations.index', compact('locations'));
+        $uri = $this->getUri($request);
+        return view('locations.index', compact('locations','uri'));
     }
-    public function show(Location $location)
+    public function show(Location $location,Request $request)
     {
-        return view('locations.show', compact('location'));
+        $uri = $this->getUri($request);
+        return view('locations.show', compact('location','uri'));
     }
     public function create()
     {
@@ -72,9 +83,10 @@ class LocationsController extends Controller
         return redirect('/locations/create');
     }
 
-    public function edit(Location $location)
+    public function edit(Location $location,Request $request)
     {
         $this->authorize('update', $location);
+        $uri = $this->getUri($request);
         return view ('locations.edit', compact('location'));
     }
 

@@ -13,20 +13,31 @@ use App\Mail\EventProposal;
 
 class EventsController extends Controller
 {
+    public function getUri($request)
+    {
+      $uri = $request->route()->uri;
+      if(strpos($uri, '/')) {
+        $uri_array = explode('/',$uri);
+        $uri = $uri_array[0];
+      }
+      return $uri;
+    }
     public function __construct()
     {
         $this->middleware('auth')->except(['index', 'show', 'browse']);
     }
-    public function feed()
+    public function feed(Request $request)
     {
         // Deleted Feed algorithm, to keep it confidential.
+        $uri = $this->getUri($request);
         $events = Event::paginate(6);
-        return view('events.feed', compact('events'));
+        return view('events.feed', compact('events','uri'));
     }
-    public function browse()
+    public function browse(Request $request)
     {
+        $uri = $this->getUri($request);
         $events = Event::paginate(6);
-        return view('events.browse', compact('events'));
+        return view('events.browse', compact('events','uri'));
     }
     public function index()
     {
@@ -49,11 +60,12 @@ class EventsController extends Controller
         }
 
     }
-    public function create(Location $location)
+    public function create(Location $location, Request $request)
     {
+        $uri = $this->getUri($request);
         $user = auth()->user();
         $tags = Tag::all();
-        return view('events.create', compact('location', 'user', 'tags'));
+        return view('events.create', compact('location', 'user', 'tags', 'uri'));
     }
     public function store()
     {
